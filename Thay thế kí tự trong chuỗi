@@ -1,0 +1,27 @@
+Bài tập
+Viết function với đầu vào là 1 chuỗi. In ra 1 chuỗi được mã hóa và loại bỏ ký tự cách ở đầu và cuối chuỗi ban đầu
+
+Ví dụ
+Cho "javascript is cool  "; In ra "j4v45cr1pt 15 c00l"
+Cho "programming is fun"; In ra "pr0gr4mm1ng 15 fun"
+Cho "  become a coder"; In ra "b3c0m3 4 c0d3r"
+Để function làm việc chính xác, Function nên thay thế tất cả các ký tự  'a' bằng 4, 'e' bằng 3, 'i' bằng 1, 'o' bằng 0, and 's' bằng 5.
+
+Đầu vào: str
+Đầu ra: In ra 1 chuỗi được mã hóa và loại bỏ ký tự cách ở đầu và cuối chuỗi ban đầu
+
+
+//////////////////////////////////////////////////////
+
+function run(str) {
+	let a = ['a', 'e', 'i', 'o', 's'];
+	let b = ['4', '3', '1', '0', '5'];
+	for(let i=0;i<a.length;++i) {
+		let c1 = a[i], c2 = b[i];
+		for(let j=0;j<str.length;++j) {
+			if(str.charAt(j)==c1) str = str.slice(0, j) + c2 + str.slice(j+1);
+		}
+	}
+	console.log(str);
+}
+
