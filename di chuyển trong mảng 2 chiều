@@ -1,0 +1,14 @@
+int chessKnight(string Cell)
+{
+    char x= Cell[0];
+    char y= Cell[1];
+    int dem=0;
+    int row[] = {-2, -2, -1, -1, 1, 1, 2, 2};
+    int col[] = {-1, 1, -2, 2, -2, 2, -1, 1};
+    for(int dir=0;dir<8;++dir) {
+        int nx= x + row[dir];
+        int ny= y + col[dir];
+        if('a'<=nx && nx<='h' && '1'<=ny && ny<='8') ++dem;
+    }
+    return dem;
+}
