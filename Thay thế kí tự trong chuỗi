@@ -12,6 +12,7 @@ Cho "  become a coder"; In ra "b3c0m3 4 c0d3r"
 
 
 //////////////////////////////////////////////////////
+/// Cách 1:
 
 function run(str) {
 	let a = ['a', 'e', 'i', 'o', 's'];
@@ -25,3 +26,21 @@ function run(str) {
 	console.log(str);
 }
 
+
+
+/// Cách 2:
+function run(str) {
+	let myobj = {
+		a : '4',
+		e : '3',
+		i : '1',
+		o : '0',
+		s : '5'
+	};
+	for(let i in myobj) {
+		while(str.includes(i)) {
+			str = str.replace(i, myobj[i]);
+		}
+	}
+	console.log(str.trim());
+}
